@@ -1,0 +1,47 @@
+header{
+   text-align: center;
+}
+
+button{
+
+    height: 50px;
+    width: 120px;
+    color: white;
+    margin-right: 1%;
+    border-radius: 10%;
+}
+
+#ver{
+
+    background: blue ;
+}
+
+#crear{
+
+    background: green;
+}
+
+#jugar{
+
+    background:rgb(0, 153, 255) ;
+}
+
+.cabecera{
+
+    background: gray;
+   
+}
+
+.dato{
+
+    background: honeydew;
+}
+
+#content{
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
