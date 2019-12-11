@@ -97,6 +97,20 @@ function mostrarPersonaje(){
         datoPad.classList.add('dato');
         datos.appendChild(datoPad);
 
+         // //FAMILIA PERSONAJE
+         let datoFam = document.createElement('div');
+         datoFam.innerHTML = casa;
+         datoFam.classList.add('small');
+         datoFam.classList.add('dato');
+         datos.appendChild(datoFam);
+
+         // //CABECERA TITULO
+         let cabeceraTit = document.createElement('div');
+         cabeceraTit.innerHTML = 'Titulo';
+         cabeceraTit.classList.add('big');
+         cabeceraTit.classList.add('cabecera');
+         datos.appendChild(cabeceraTit);
+
         //TITULO PERSONAJE
         let datoTit = document.createElement('div');
         datoTit.innerHTML = titulo;
