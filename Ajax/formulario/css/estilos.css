@@ -1,0 +1,59 @@
+
+:root{
+
+    --sombreado: 1px 1px 2px 1px black;
+    --radio : 4px;
+}
+
+
+
+
+form{
+
+    background: lightgray;
+    border: 1px solid black;
+    text-align: right;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--sombreado);
+    border-radius: var(--radio);
+    
+}
+
+h3{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    
+}
+
+input{
+
+    box-shadow: var(--sombreado);
+
+}
+
+p{
+
+    margin-right: 15%;
+}
+
+button{
+
+   margin-right: 50%;
+   margin-bottom: 2%;
+   background-color:blue;
+   color: white;
+   border: none;
+   font-size: 75%;
+   padding: 1% 2%;
+   border-radius: var(--radio);
+   
+   
+}
+
+#enviar{
+
+    margin-right: 50%;
+}
