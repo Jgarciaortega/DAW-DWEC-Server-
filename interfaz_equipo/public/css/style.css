@@ -1,7 +1,7 @@
 body{
 
     background-image: url('../img/campo-fondo2.jpg');
-    background-size: contain;
+    background-size: 100% contain;
     background-repeat: no-repeat;
     color: white;
 
@@ -25,7 +25,7 @@ main{
 
 #campo{
     width: 1000px;
-    height: 1100px;
+    height: 600px;
     background-image: url('../img/campo-de-futbol.jpeg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -68,8 +68,8 @@ main{
 
 .jugador{
 
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px; 
     border: 1px solid black;
     
 }
@@ -90,8 +90,8 @@ td{
 .contenedorJug{
 
     border: 1px solid black;
-    width: 105px;
-    height: 105px;
+    width: 75px;
+    height: 75px;
 }
 
 
