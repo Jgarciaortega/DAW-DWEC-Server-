@@ -1,9 +1,3 @@
-
-
-
-
-
-
 function verFicha() {
 
     fetch(request)
