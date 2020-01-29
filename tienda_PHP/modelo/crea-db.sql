@@ -5,8 +5,8 @@ DROP DATABASE IF EXISTS refrescos;
 FLUSH PRIVILEGES;
 CREATE DATABASE refrescos;
 
-CREATE USER IF NOT EXISTS tomcat@localhost IDENTIFIED BY 'tomcat';
-GRANT ALL PRIVILEGES ON refrescos.* TO 'tomcat'@'localhost';
+CREATE USER IF NOT EXISTS user@localhost IDENTIFIED BY 'user';
+GRANT ALL PRIVILEGES ON refrescos.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 
 USE refrescos ;
