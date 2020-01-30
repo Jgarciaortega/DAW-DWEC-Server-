@@ -122,6 +122,8 @@ function drag(ev) {
 
     //Indicamos que valor y tipo de información vamos a arrastrar. En este caso texto e ID del elemento.
     ev.dataTransfer.setData("text", ev.target.id);
+    console.log(ev.target.parentNode.pare);
+    
 }
 
 function drop(ev) {
@@ -191,7 +193,7 @@ function modifyDatabase(id, nuevoRol) {
             }
         
         })
-        .then( reloadTable());
+        .then(setTimeout(reloadTable,100));
 }
 
 

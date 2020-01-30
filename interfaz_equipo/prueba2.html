@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .elements {
+            text-align: center;
+            border: 1px solid black;
+            width: 450px;
+            height: 70px;
+        }
+
+        #zonas {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .zona {
+            width: 450px;
+            height: 800px;
+            background-color: olive;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div draggable="true" class="elements" id="item1">
+        <img src="public/img/isco.jpg" width=50 alt="">
+    </div>
+    <div draggable="true" class="elements" id="item2">
+        <img src="public/img/bale.jpg" width=50 alt="">
+    </div>
+    <div id="zonas">
+        <div class="zona">ZONA</div>
+        <div class="zona">ZONA</div>
+    </div>
+</body>
+<script>
+
+    let divOrigen;
+    let item1 = document.getElementById('item1');
+    let item2 = document.getElementById('item2');
+    let zonas = document.getElementById('zonas');
+
+    item1.addEventListener("dragover", allowDrop);
+    item1.addEventListener("dragstart", dragStart);
+    item1.addEventListener("drop", drop);
+
+    item2.addEventListener("dragover", allowDrop);
+    item2.addEventListener("dragstart", dragStart);
+    item2.addEventListener("drop", drop);
+
+
+    zonas.addEventListener("dragover", allowDrop);
+    zonas.addEventListener("drop", drop);
+
+
+    function drop(ev) {
+
+        console.log('drop');
+        ev.preventDefault();
+        let data = ev.dataTransfer.getData("text");
+
+        if(!ev.target.draggable){
+
+            ev.target.appendChild(document.getElementById(data));
+
+        }
+       
+    }
+
+    function allowDrop(ev) {
+        console.log('allowdrop');
+        ev.preventDefault();
+
+    }
+
+    function dragStart(ev) {
+        console.log('dragstart');
+        ev.dataTransfer.setData("text", ev.target.id);
+        divOrigen = document.getElementById(ev.target.id);
+        console.log(divOrigen);
+    }
+
+</script>
+
+</html>
