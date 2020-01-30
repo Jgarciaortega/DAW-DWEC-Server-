@@ -184,16 +184,16 @@ function modifyDatabase(id, nuevoRol) {
         method: 'POST',
         body: data
     })
-        .then(function (response) {
+        .then(async function (response) {
             if (response.ok) {
-                return response.text();
+                return await response.text();
             } else {
 
                 throw "Error en la llamada al carrito";
             }
         
         })
-        .then(setTimeout(reloadTable,100));
+        .then(reloadTable);
 }
 
 
