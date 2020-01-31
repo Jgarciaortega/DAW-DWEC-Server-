@@ -14,7 +14,7 @@ function init() {
             }
         })
         .then(datos => {
-
+            
             loadInterface(datos);
             loadDataTable(datos);
 
@@ -138,6 +138,7 @@ function drop(ev) {
     let elementoPadre = ev.target.parentNode;
     let nuevoRol = elementoPadre.dataset.rol;
 
+    console.log(ev.dataTransfer.getData("text"));
     //Colgamos el elemeto arrastrado y soltado en el nuevo destino.
     if (!ev.target.draggable) {
         ev.target.appendChild(elemento);

@@ -1,0 +1,24 @@
+{
+    "productos":[
+        {
+            "articulo":"patata", 
+            "precio": "0.40",
+            "imagen":"img/patata.png"
+        }, 
+        {
+            "articulo":"tomate", 
+            "precio": "1.80",
+            "imagen":"img/tomate.png"
+        }, 
+        {
+            "articulo":"cereales", 
+            "precio": "2.40",
+            "imagen":"img/kellogs.png"
+        }, 
+        {
+            "articulo":"fanta", 
+            "precio": "1.10",
+            "imagen":"img/tyrion.jpg"
+        }
+    ]
+}
