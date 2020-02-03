@@ -99,6 +99,15 @@ img {
     float:none;
     margin-bottom:15px;
 }
+
+.contenedor{
+
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin-left: 5%;
+    text-align: center;
+}
 .error {
     border:1px solid red;
     float:left;
@@ -115,6 +124,14 @@ img {
 
 .visible{
     visibility: visible;
+}
+
+#check{
+
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 @media (max-width: 726px) {
     #contenedorFotos {
@@ -142,4 +159,6 @@ img {
         font-size:14px;
     }
 }
+
+
 

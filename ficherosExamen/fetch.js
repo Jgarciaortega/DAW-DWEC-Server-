@@ -16,6 +16,7 @@ function getFetch() {
 
 }
 
+
 /*ENVIAR JSON POR POST*/
 function postFetch() {
 
@@ -79,6 +80,18 @@ function getJSON() {
                     '<p>' + element.articulo + '</p>' +
                     '<p>' + element.precio + '</p>' +
                     '</div>';
+            datos.productos.forEach(element => {
+
+                let estado = document.getElementById(element.estado);
+
+                estado.innerHTML +=
+                    '<div class="producto" draggable="true" id="' + element.articulo + '">' +
+                    '<img src="' + element.imagen + '">' +
+                    '<p>' + element.articulo + '</p>' +
+                    '<p>' + element.precio + '</p>' +
+                    '</div>';
+
+            });
 
             });
 

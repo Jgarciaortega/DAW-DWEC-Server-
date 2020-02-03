@@ -112,14 +112,14 @@ function loadDataTable(datos) {
 }
 
 function allowDrop(ev) {
-
+    
     //Permitir que reciba algún elemento
     ev.preventDefault();
 
 }
 
 function drag(ev) {
-
+    
     //Indicamos que valor y tipo de información vamos a arrastrar. En este caso texto e ID del elemento.
     ev.dataTransfer.setData("text", ev.target.id);
     console.log(ev.target.parentNode.pare);
@@ -128,6 +128,10 @@ function drag(ev) {
 
 function drop(ev) {
 
+    console.log(ev.dataTransfer.getData());
+    console.log(ev.target);
+    
+    
     //Evitamos el comportamiento normal del navegador, que sería abrir el elemento en una nueva pestaña.
     ev.preventDefault();
     //Guardamos el elemento, llamado "text" en una variable.

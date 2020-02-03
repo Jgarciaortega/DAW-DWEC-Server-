@@ -41,6 +41,7 @@ var masculinos = nombres.slice(1, 3);
 
 // masculinos contiene ['Pedro','Miguel']
 
-
 /*DE STRING A ARRAY*/
 let strArr = [...string];
+
+

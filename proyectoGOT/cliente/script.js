@@ -91,9 +91,6 @@ function postFetch(nombre) {
 
 
 
-
-
-
 function montarInterfaz(datos) {
 
     let main = document.querySelector('main');

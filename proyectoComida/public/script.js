@@ -112,7 +112,7 @@ function drop(ev) {
     if (!ev.target.draggable) {
        
         ev.target.appendChild(element);
-        //mostrarNuevoXML(ev.target.id);
+        mostrarNuevoXML(ev.target.id);
     }
 }
 
