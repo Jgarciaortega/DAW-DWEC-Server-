@@ -13,7 +13,7 @@ function comprobarContenido() {
 
     if (this.value == '') {
 
-        document.getElementById('e' + inputName).style.visibility = 'visible';
+        document.getElementById('e' + inputName).classList.add('visible');
         this.classList.add('errorCaja');
 
     }

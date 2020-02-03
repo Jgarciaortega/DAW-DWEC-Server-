@@ -112,6 +112,10 @@ img {
 
     border:1px solid red;
 }
+
+.visible{
+    visibility: visible;
+}
 @media (max-width: 726px) {
     #contenedorFotos {
         margin:0;
