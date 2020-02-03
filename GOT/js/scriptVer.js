@@ -1,99 +1,53 @@
-function verFicha() {
+function init(){
 
-    fetch(request)
-        .then(response => response.json())
-        .then(data => {
+    let url = 'http://localhost/DAW-DWEC-Server-/GOT/servidor/got.json';
 
-            let contFichas = document.getElementById('contenedorFichas');
+    obtenerJSON(url);
+}
 
-            for (let i = 0; i < data.got.length; i++) {
+function obtenerJSON(url){
 
-                let img = document.createElement('img');
-                img.setAttribute('src', data.got[i].imagen);
-               
-                let datos = document.createElement('div');
-                datos.setAttribute('class', 'datos');
+    fetch(url)
+    .then(response => {
 
-                //CABECERA NOMBRE
-                let cabeceraNom = document.createElement('div');
-                cabeceraNom.innerHTML = 'Nombre';
-                cabeceraNom.classList.add('small');
-                cabeceraNom.classList.add('cabecera');
-                datos.appendChild(cabeceraNom);
+        if(response.ok){
+            return response.json();
 
-                //CABECERA APELLIDOS
-                let cabeceraApe = document.createElement('div');
-                cabeceraApe.innerHTML = 'Apellidos';
-                cabeceraApe.classList.add('medium');
-                cabeceraApe.classList.add('cabecera');
-                datos.appendChild(cabeceraApe);
+        }else{
 
-                //NOMBRE PERSONAJE
-                let datoNom = document.createElement('div');
-                datoNom.innerHTML = data.got[i].nombre;
-                datoNom.classList.add('small');
-                datoNom.classList.add('dato');
-                datos.appendChild(datoNom);
+            throw "error en la llamada";
+        }
+        
 
-                //APELLIDOS PERSONAJE
-                let datoApe = document.createElement('div');
-                datoApe.innerHTML = data.got[i].apellidos;
-                datoApe.classList.add('medium');
-                datoApe.classList.add('dato');
-                datos.appendChild(datoApe);
+    })
+    .then(datos => {
 
-                //CABECERA PADRES
-                let cabeceraPad = document.createElement('div');
-                cabeceraPad.innerHTML = 'Padres';
-                cabeceraPad.classList.add('medium');
-                cabeceraPad.classList.add('cabecera');
-                datos.appendChild(cabeceraPad);
+        let contenedorFichas = document.getElementById('contenedorFichas');
 
-                // //CABECERA CASA
-                let cabeceraCas = document.createElement('div');
-                cabeceraCas.innerHTML = 'Casa';
-                cabeceraCas.classList.add('small');
-                cabeceraCas.classList.add('cabecera');
-                datos.appendChild(cabeceraCas);
+        datos.got.forEach(element => {
+            console.log(element);
+           contenedorFichas.innerHTML += 
+           '<img src="'+element.imagen+'">'+
+           '<div class="datos">'+
+           '<div class="small cabecera">Nombre</div>'+
+           '<div class="medium cabecera">Apellidos</div>'+
+           '<div class="small dato">'+element.nombre+'</div>'+
+           '<div class="medium dato">'+element.apellidos+'</div>'+
+           '<div class="medium cabecera">Padres</div>'+
+           '<div class="small cabecera">Casa</div>'+
+           '<div class="medium dato">'+element.padres+'</div>'+
+           '<div class="small dato">'+element.familia+'</div>'+
+           '<div class="big cabecera">Titulo</div>'+
+           '<div class="big dato">'+element.titulo+'</div>'+
+            '</div>'
+           
+        });
 
-                //PADRES PERSONAJE
-                let datoPad = document.createElement('div');
-                datoPad.innerHTML = data.got[i].padres;
-                datoPad.classList.add('medium');
-                datoPad.classList.add('dato');
-                datos.appendChild(datoPad);
 
-                // //FAMILIA PERSONAJE
-                let datoFam = document.createElement('div');
-                datoFam.innerHTML = data.got[i].familia;
-                datoFam.classList.add('small');
-                datoFam.classList.add('dato');
-                datos.appendChild(datoFam);
-
-                // //CABECERA TITULO
-                let cabeceraTit = document.createElement('div');
-                cabeceraTit.innerHTML = 'Titulo';
-                cabeceraTit.classList.add('big');
-                cabeceraTit.classList.add('cabecera');
-                datos.appendChild(cabeceraTit);
-
-                // //TITULO PERSONAJE
-                let datoTit = document.createElement('div');
-                datoTit.innerHTML = data.got[i].titulo;
-                datoTit.classList.add('big');
-                datoTit.classList.add('dato');
-                datos.appendChild(datoTit);
-
-                contFichas.appendChild(img);
-                contFichas.appendChild(datos);
-               
-            }
-        })
+    });
 
 }
 
 
-//VARIABLES GLOBALES
-let request = 'http://localhost/DAW-DWEC-Server-/GOT/servidor/got.json';
 
-window.addEventListener('load', verFicha);
+window.addEventListener('load', init);

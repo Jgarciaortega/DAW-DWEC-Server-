@@ -24,13 +24,14 @@ div {
 }
 .foto {
 	width:150px;
-	height:200px;
+    height:200px;
+    
 }
 img {
 	width:150px;
 	height:200px;
     box-shadow:2px 2px 2px silver;
-    float: left;
+    float:left;
 }
 .cabecera {
 	background-color:silver;
@@ -107,9 +108,9 @@ img {
     visibility:hidden;
 }
 
-.visible{
+.errorCaja{
 
-    visibility: visible;
+    border:1px solid red;
 }
 @media (max-width: 726px) {
     #contenedorFotos {

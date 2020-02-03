@@ -1,0 +1,40 @@
+#zonaArriba{
+
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-template-rows: repeat(2,1fr);
+   height: 414px;
+   width: 100%;
+   border: 1px dashed black;
+}
+
+#zonaAbajo{
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    height: 414px;
+    width: 100%;
+    border: 1px dashed black;
+
+}
+
+.personajes{
+
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+   
+}
+
+.fotos{
+
+    width: 150px;
+
+}
+
+#form{
+
+    margin: 1%;
+}
+
