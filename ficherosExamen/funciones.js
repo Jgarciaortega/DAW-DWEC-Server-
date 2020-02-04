@@ -45,3 +45,25 @@ var masculinos = nombres.slice(1, 3);
 let strArr = [...string];
 
 
+function enviarForm(idDelForm,url) {
+
+    let form = document.querySelector(`#${idDelForm}`);
+  
+    let campos = form.querySelectorAll(`input`);
+  
+    let formData = new FormData();
+  
+    // Por cada input del form(que puede ser un div) le hace un append
+    campos.forEach(item => {
+      formData.append(`${item.name}`, document.querySelector(`input[value='${item}']`).value);
+    });
+  
+    //Envia el form por post a la url
+    fetch(url,{
+      method: 'POST',
+      body: formData
+    }).then(res => res.json())
+      .catch(error => console.error('error: ', error))
+      .then(response => console.log('Success: ', response));
+  
+  }

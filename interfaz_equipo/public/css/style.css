@@ -70,7 +70,7 @@ main{
 
     width: 70px;
     height: 70px; 
-    border: 1px solid black;
+   
     
 }
 
@@ -89,7 +89,7 @@ td{
 
 .contenedorJug{
 
-    border: 1px solid black;
+  
     width: 75px;
     height: 75px;
 }
@@ -97,16 +97,31 @@ td{
 
 #porteria{
     margin-top: 100%;
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
    
 #defensa{
     margin-top: 40%;
+    width: 70px;
+    height: 380px;
+    border: 1px solid black;
 }
 
 #medio{
+    width: 70px;
+    height: 380px;
     margin-top: 40%;
+    border: 1px solid black;
 }
 
 #delantera{
-    margin-top: 80%;
+    width: 70px;
+    height: 380px;
+    margin-top: 40%;
+    border: 1px solid black;
 }

@@ -61,6 +61,20 @@ function modifyDatabase(id, nuevoRol) {
         
 }
 
+/**ENVIAR FORM POR POST */
+function postFormData(){
+
+    let url = new URL('http://localhost/pruebaAngel/BBDD/php.php');  
+    let datos = new FormData(form);
+
+    fetch(url,{
+        method:'POST',
+        body:datos
+    }).then(res => res.text())
+    .then(response => console.log(response));
+    
+}
+
 /*DESCARGAR DATOS EN FORMATO JSON*/
 function getJSON() {
 

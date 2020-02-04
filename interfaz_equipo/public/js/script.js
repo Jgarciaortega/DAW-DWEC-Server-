@@ -49,27 +49,20 @@ function loadInterface(datos) {
         let jugador = document.createElement('div');
         let img = document.createElement('img');
 
-        jugador.addEventListener('dragover', allowDrop);
-        jugador.addEventListener('drop', drop);
+        posicion.classList.add('droppeable');
+        posicion.addEventListener('dragover', allowDrop);
+        posicion.addEventListener('drop', drop);
         jugador.classList.add('contenedorJug');
-        img.addEventListener('dragstart', drag);
-        img.setAttribute('id', datos[i]._idjugador);
+        jugador.addEventListener('dragstart', drag);
+        jugador.setAttribute('id', datos[i]._idjugador);
+        jugador.setAttribute('draggable', 'true');
         img.classList.add('jugador');
         img.setAttribute('src', "img/" + datos[i].imagen);
-        // img.setAttribute('draggable', 'true');
+        img.setAttribute('draggable','false');
         jugador.appendChild(img);
         posicion.appendChild(jugador);
         
     }
-
-    //Ya que no se drag drop sobre div con img creamos un div vacio para ello
-    let pos = document.getElementById('banquillo');
-    let jug = document.createElement('div');
-
-    jug.addEventListener('dragover', allowDrop);
-    jug.addEventListener('drop', drop);
-    jug.classList.add('contenedorJug');
-    pos.appendChild(jug);
 
 }
 
@@ -122,15 +115,11 @@ function drag(ev) {
     
     //Indicamos que valor y tipo de información vamos a arrastrar. En este caso texto e ID del elemento.
     ev.dataTransfer.setData("text", ev.target.id);
-    console.log(ev.target.parentNode.pare);
     
 }
 
 function drop(ev) {
 
-    console.log(ev.dataTransfer.getData());
-    console.log(ev.target);
-    
     
     //Evitamos el comportamiento normal del navegador, que sería abrir el elemento en una nueva pestaña.
     ev.preventDefault();
@@ -139,12 +128,11 @@ function drop(ev) {
     //Seleccionamos el elemento del dom a partir de su id
     let elemento = document.getElementById(data);
     //Obtenemos la nueva demarcacion en el campo para modificarla en la BBDD
-    let elementoPadre = ev.target.parentNode;
-    let nuevoRol = elementoPadre.dataset.rol;
+    let nuevoRol = ev.target.dataset.rol;
+    
 
-    console.log(ev.dataTransfer.getData("text"));
     //Colgamos el elemeto arrastrado y soltado en el nuevo destino.
-    if (!ev.target.draggable) {
+    if (ev.target.classList.contains('droppeable')) {
         ev.target.appendChild(elemento);
         modifyDatabase(data, nuevoRol);
     }
@@ -179,26 +167,44 @@ function reloadTable(){
 
 function modifyDatabase(id, nuevoRol) {
 
-    let url = '../controller/modifyDatabase.php';
-    let data = new FormData();
+    // let url = '../controller/modifyDatabase.php';
+    // let data = new FormData();
 
-    data.append('id', id);
-    data.append('nuevoRol', nuevoRol);
+    // data.append('id', id);
+    // data.append('nuevoRol', nuevoRol);
+
+    // fetch(url, {
+    //     method: 'POST',
+    //     body: data
+    // })
+    //     .then(async function (response) {
+    //         if (response.ok) {
+    //             return await response.text();
+    //         } else {
+
+    //             throw "Error en la llamada al carrito";
+    //         }
+        
+    //     })
+    //     .then(reloadTable);
+
+    let url = '../controller/modifyDatabase.php';
+    var data = { id: id, nuevoRol: nuevoRol };
 
     fetch(url, {
-        method: 'POST',
-        body: data
-    })
-        .then(async function (response) {
-            if (response.ok) {
-                return await response.text();
-            } else {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
 
-                throw "Error en la llamada al carrito";
-            }
-        
-        })
-        .then(reloadTable);
+
+
+
+
 }
 
 

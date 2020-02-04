@@ -115,21 +115,28 @@ function comprobarAciertos() {
     let aciertos = 0;
     let fallos = 0;
     let divCheck = document.getElementById('check');
+    let divs = divCheck.querySelectorAll('div')
 
-    for (div of divCheck.children) {
 
-        if(div.children.length > 0){
+    divs.forEach(div => {
 
-            let contenido = div.firstChild.nextSibling.dataset.family;
+        if (div.children.length > 0) {
+
+            // let contenido = div.firstChild.nextSibling.dataset.family;
             let id = div.id;
-
-            if(contenido == id) aciertos++;
-            else fallos++;
+            console.log(div.firstChild.nextSibling.dataset.family);
+            console.log(id);
+            
+            
+            // if (contenido == id) aciertos++;
+            // else fallos++;
 
         }
-    }
+        
+    })
 
-    mostrarResultado(aciertos,fallos);
+
+    mostrarResultado(aciertos, fallos);
 
 }
 

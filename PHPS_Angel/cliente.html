@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="nombre">
+    <button>SERVER</button>
+</body>
+<script>
+
+    document.querySelector('button').addEventListener('click', llamarServer);
+
+    function llamarServer() {
+
+        let nombre = document.querySelector('input').value;
+        let url = new URL('http://localhost/DAW-DWEC-Server-/PHPS_Angel/rest-get.php');
+        let data = { nombre: 'Angel' };
+        url.search = new URLSearchParams(data).toString();
+
+        fetch(url, {
+            method: 'GET', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response));
+
+    }
+</script>
+
+</html>
