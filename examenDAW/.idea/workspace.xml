@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c872d188-559e-463e-aa8c-3d8c04aace49" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WspU6NWDypAHzyzguaksjMpEM8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diega\WebstormProjects\examenDAW\img" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c872d188-559e-463e-aa8c-3d8c04aace49" name="Default Changelist" comment="" />
+      <created>1579948168725</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579948168725</updated>
+      <workItem from="1579948172225" duration="9183000" />
+      <workItem from="1580502079800" duration="289000" />
+      <workItem from="1580502456927" duration="640000" />
+      <workItem from="1580503132279" duration="355000" />
+      <workItem from="1580503518633" duration="493000" />
+      <workItem from="1580504198955" duration="23000" />
+      <workItem from="1580504439020" duration="22202000" />
+      <workItem from="1580634582275" duration="261000" />
+      <workItem from="1580634875126" duration="3592000" />
+      <workItem from="1580652429180" duration="608000" />
+      <workItem from="1580667106570" duration="140000" />
+      <workItem from="1580667421004" duration="243000" />
+      <workItem from="1580667826828" duration="2279000" />
+      <workItem from="1580727675653" duration="2323000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="550" y="217" width="800" height="680" key="#Chrome_Settings" timestamp="1580502469721">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="550" y="217" width="800" height="680" key="#Chrome_Settings/0.30.1920.1050@0.30.1920.1050" timestamp="1580502469721" />
+    <state x="555" y="216" width="800" height="680" key="#Scopes" timestamp="1580502725653">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="555" y="216" width="800" height="680" key="#Scopes/0.30.1920.1050@0.30.1920.1050" timestamp="1580502725653" />
+    <state x="555" y="216" width="800" height="680" key="#Web_Browsers" timestamp="1580503483015">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="555" y="216" width="800" height="680" key="#Web_Browsers/0.30.1920.1050@0.30.1920.1050" timestamp="1580503483015" />
+    <state x="418" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580502978120">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="418" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1580502978120" />
+    <state x="1205" y="175" width="424" height="487" key="FileChooserDialogImpl" timestamp="1580502628204">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1205" y="175" width="424" height="487" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1580502628204" />
+    <state x="464" y="190" width="992" height="733" key="SettingsEditor" timestamp="1580550747364">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="464" y="190" width="992" height="733" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1580550747364" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1580296262924">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1580296262924" />
+    <state x="623" y="261" width="672" height="678" key="search.everywhere.popup" timestamp="1580580241865">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="623" y="261" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1580580241865" />
+  </component>
+</project>

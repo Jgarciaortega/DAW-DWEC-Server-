@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<juego id="juego">
+    <item id="rock">
+        <imagen>img/piedra.png</imagen>
+        <nombre>Piedra</nombre>
+        <puntos>1</puntos>
+    </item>
+    <item id="paper">
+        <imagen>img/papel.png</imagen>
+        <nombre>Papel</nombre>
+        <puntos>2</puntos>
+    </item>
+    <item id="scissors">
+        <imagen>img/tijeras.png</imagen>
+        <nombre>Tijeras</nombre>
+        <puntos>3</puntos>
+    </item>
+    <item id="lizard">
+        <imagen>img/lagarto.png</imagen>
+        <nombre>Lagarto</nombre>
+        <puntos>4</puntos>
+    </item>
+    <item id="spock">
+        <imagen>img/spock.png</imagen>
+        <nombre>Spock</nombre>
+        <puntos>5</puntos>
+    </item>
+</juego>

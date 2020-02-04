@@ -115,21 +115,21 @@ function comprobarAciertos() {
     let aciertos = 0;
     let fallos = 0;
     let divCheck = document.getElementById('check');
-    let divs = divCheck.querySelectorAll('div')
+    let divs = divCheck.querySelectorAll('.contenedor')
 
 
     divs.forEach(div => {
 
         if (div.children.length > 0) {
 
-            // let contenido = div.firstChild.nextSibling.dataset.family;
+            let contenido = div.firstChild.nextSibling.dataset.family;
             let id = div.id;
             console.log(div.firstChild.nextSibling.dataset.family);
             console.log(id);
             
             
-            // if (contenido == id) aciertos++;
-            // else fallos++;
+            if (contenido == id) aciertos++;
+            else fallos++;
 
         }
         

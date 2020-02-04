@@ -1,0 +1,15 @@
+{
+  "mensajes":[{
+    "tipa":"Tijeras cortan papel",
+    "papi":"Papel tapa piedra",
+    "pila":"Piedra aplasta lagarto",
+    "lasp":"Lagarto envenena a Spock",
+    "spti":"Spock rompe tijeras",
+    "tila":"Tijeras decapitan lagarto",
+    "lapa":"Lagarto devora papel",
+    "pasp":"Papel desautoriza a Spock",
+    "sppi":"Spock vaporiza piedra",
+    "piti":"Piedra aplasta tijeras"
+  }
+  ]
+}
